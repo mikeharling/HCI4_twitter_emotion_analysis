@@ -1,0 +1,22 @@
+<html> 
+  <head> 
+
+  </head> 
+
+  <body>
+
+
+<script>
+function process()
+{
+var url="search/" + document.getElementById("url").value;
+location.href=url;
+return false;
+}
+</script>
+<form onSubmit="return process();">
+Search Term: <input type="text" name="url" id="url"> <input type="submit" value="go">
+</form>
+
+  </body> 
+</html>

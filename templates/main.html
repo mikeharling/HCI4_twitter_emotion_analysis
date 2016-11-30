@@ -1,0 +1,33 @@
+<html> 
+  <head> 
+
+  </head> 
+
+  <body>
+
+
+<script>
+function process()
+{
+var url="/search/" + document.getElementById("url").value;
+location.href=url;
+return false;
+}
+</script>
+<form onSubmit="return process();">
+Search Term: <input type="text" name="url" id="url"> <input type="submit" value="go">
+</form>
+
+  {% if search_term %}
+  <h1>Results for {{ search_term }}</h1>
+{% endif %}
+
+  <a href="../radarscatter"><h3>Radar Scatter Plot</h3></a> 
+  <a href="../wordclouds"><h3>Wordclouds</h3></a>
+  <a href="../patches"><h3>Patches</h3></a>
+  <a href="../barchart"><h3>Bar Chart</h3></a>
+
+
+
+  </body> 
+</html>
